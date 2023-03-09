@@ -98,3 +98,16 @@ body {
   text-align: center;
   flex-grow: 1;
 }
+
+/* iPad iOS 14_7_1 */
+@media only screen and (max-width: 992px) {
+  .flex-article {
+    flex-flow: column wrap;
+  }
+  .articles .element {
+    margin: 10px 10px 0px 10px;
+  }
+  .articles .disclaimer {
+    margin: 10px 10px 0px 10px;
+  }
+}
