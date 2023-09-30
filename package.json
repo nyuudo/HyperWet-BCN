@@ -1,0 +1,14 @@
+{
+  "name": "hyperwet-bcn",
+  "version": "1.0.0",
+  "description": "parody concept brand website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nyuudo",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.68.0"
+  }
+}

@@ -1,0 +1,49 @@
+@use "../base/colors";
+
+@mixin gradient-background($hyper-gradient) {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  height: 112px;
+  background: $hyper-gradient;
+  mix-blend-mode: multiply;
+}
+
+.hyper-header {
+  padding: 2rem;
+  display: block;
+  position: relative;
+
+  &::after {
+    @include gradient-background(colors.$hyper-gradient);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hyper-tools {
+  display: flex;
+  gap: 32px;
+}
+
+.hyper-basket {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    color: red;
+    content: "•";
+    font-size: 40px;
+    margin-right: 24px;
+    margin-bottom: 8px;
+  }
+}
