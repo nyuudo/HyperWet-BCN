@@ -1,0 +1,96 @@
+@use "base";
+@use "components";
+
+body {
+  font-family: base.$primary-font;
+  color: base.$secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+img[alt] {
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.4));
+}
+
+@include base.media("<=mobile") {
+  body {
+    @include components.cover-background("/assets/HyperWetBCN-mobile.webp");
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  .hyper-tools {
+    gap: 16px;
+  }
+
+  .hyper-footer {
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: base.$primary-color;
+      width: 375px;
+      height: 144px;
+      mix-blend-mode: multiply;
+    }
+    &::after {
+      display: none;
+    }
+    .footer-logo {
+      width: 240px;
+      height: 45px;
+      align-self: center;
+    }
+    .footer-text {
+      font-size: 0.75rem;
+      align-self: center;
+    }
+  }
+}
+
+@include base.media("<=tablet") {
+  body {
+    @include components.cover-background("/assets/HyperWetBCN-tablet.webp");
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-left: -16px;
+    margin-top: 16px;
+    &::before {
+      width: 69px;
+      height: 92px;
+    }
+  }
+  .hyper-search {
+    &::after {
+      display: none;
+    }
+  }
+
+  .hyper-user {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@include base.media(">tablet") {
+  body {
+    @include components.cover-background("/assets/HyperWetBCN-desktop.webp");
+  }
+}

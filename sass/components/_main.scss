@@ -1,0 +1,11 @@
+@mixin cover-background($image) {
+  background: url("#{$image}") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hyper-main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 1rem;
+}

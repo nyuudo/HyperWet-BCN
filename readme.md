@@ -1,23 +1,7 @@
-# SPRINT 1
+# [![HyperWet© BCN](/assets/hw-logo-positive.svg)](https://nyuudo.com/)
 
-En aquesta pràctica hauràs de fer un Layout que ha de funcionar tant en escriptori, com mòbil i tauleta.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)
 
-Tingues en compte les següents consideracions. Són errors habituals en els lliuraments:
+A branding concept mocking the UK brand [SuperDry© JPN](https://www.superdry.com/) whom appropriates the _exoticism_ of Japanese culture in order to make its brand appealing to western audiences. I replaced **Japan** with **BCN**, instead of **Super** is **Hyper**, and instead of **dry** this is **wet**, like the typical weather in Barcelona 🤡
 
-- En general, mai li posem height a una capa, sinó que deixem que la capa s'adapti al seu contingut (si la capa no té contingut, li pots posar un height).
-- La pàgina no hauria de tenir barra de scroll horitzontal (si et passa, hauràs d'esbrinar inspeccionant la pàgina quin bloc és més ample que la pantalla del navegador).
-- Dins d'un div sol haver-hi altres divs. - Els divs tenen display:block per defecte. Això fa que es vagin col·locant de manera vertical. Per tant, sovint no és necessari especificar els següents estils per a un element per ser una cosa redundant:
-  .element{ display:flex; flex-direction:column }
-- En un div, per defecte l'ample és la totalitat de la capa que embolica, així que normalment no serà necessari especificar width:100%
-
-## Exercici 1
-
-A partir del wireframe que t'aportem en format .png, hauràs de fer la maquetació en format escriptori. És indiferent els colors escollits, però sí que és molt important que facis l'estructura de caixes que t'indiquem.
-
-## Exercici 2
-
-S'ha de començar a preparar l'adaptació a diferents dispositius, i per això has de tenir clar el concepte de Media Query. Fixa't que hi ha canvi de distribució i color d'alguns elements.
-
-## Exercici 3
-
-Com en el cas anterior, ara hauràs de fer l'adaptació a versió Mobile.
+I used this tiny project on purpose to practice the syntax of **SASS** in different scenarios that include SVGs. This webpage is optimized for Firefox, which apparently is the one that accepts all my tinkering.

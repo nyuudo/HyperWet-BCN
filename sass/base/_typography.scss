@@ -1,0 +1,65 @@
+@use "../base/colors";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
+
+$primary-font: "Noto Sans JP", sans-serif;
+$higlight-font: "Caprasimo", cursive;
+
+h1 {
+  font-family: $higlight-font;
+  font-size: 3.5rem;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+
+  &::selection {
+    background-color: colors.$dark-color;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    border-bottom: 1px solid colors.$secondary-color;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    width: 375px;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+
+  &::selection {
+    background-color: colors.$dark-color;
+  }
+}
+
+h3 {
+  margin-left: -25px;
+  margin-top: 25px;
+  padding-top: 16px;
+  font-size: 1.25rem;
+  text-align: center;
+  position: relative;
+  font-weight: 900;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 120px;
+    background-image: url(/assets/hw-drop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../base/colors";
+
+@mixin gradient-background($hyper-gradient) {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  height: 112px;
+  background: $hyper-gradient;
+  mix-blend-mode: multiply;
+}
+
+.hyper-header {
+  padding: 2rem;
+  display: block;
+  position: relative;
+
+  &::after {
+    @include gradient-background(colors.$hyper-gradient);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hyper-tools {
+  display: flex;
+  gap: 32px;
+}
+
+.hyper-search {
+  position: relative;
+
+  &::after {
+    content: "SEARCH";
+    display: contents;
+    vertical-align: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+}
+
+.hyper-user {
+  position: relative;
+
+  &::after {
+    content: "LOG-IN";
+    display: contents;
+    vertical-align: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+}
+.hyper-basket {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    bottom: 25%;
+    right: 65%;
+    color: colors.$danger-color;
+    content: "•";
+    font-size: 3rem;
+  }
+}
