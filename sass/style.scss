@@ -16,7 +16,7 @@ img[alt] {
 
 @include base.media("<=mobile") {
   body {
-    @include components.cover-background("/assets/HyperWetBCN-mobile.webp");
+    @include components.cover-background("./assets/HyperWetBCN-mobile.webp");
   }
 
   h1 {
@@ -60,7 +60,7 @@ img[alt] {
 
 @include base.media("<=tablet") {
   body {
-    @include components.cover-background("/assets/HyperWetBCN-tablet.webp");
+    @include components.cover-background("./assets/HyperWetBCN-tablet.webp");
   }
 
   h1 {
@@ -91,6 +91,6 @@ img[alt] {
 
 @include base.media(">tablet") {
   body {
-    @include components.cover-background("/assets/HyperWetBCN-desktop.webp");
+    @include components.cover-background("./assets/HyperWetBCN-desktop.webp");
   }
 }
