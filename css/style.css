@@ -157,7 +157,7 @@ h3::before {
   transform: translate(-50%, -50%);
   width: 90px;
   height: 120px;
-  background-image: url(./assets/hw-drop.svg);
+  background-image: url(../assets/hw-drop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -249,7 +249,7 @@ nav {
   right: 0%;
   width: 100%;
   height: 100%;
-  background-image: url(./assets/hw-background.svg);
+  background-image: url(../assets/hw-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   mix-blend-mode: multiply;
@@ -281,7 +281,7 @@ img[alt] {
 
 @media (max-width: 375px) {
   body {
-    background: url("./assets/HyperWetBCN-mobile.webp") no-repeat center center fixed;
+    background: url("../assets/HyperWetBCN-mobile.webp") no-repeat center center fixed;
     background-size: cover;
   }
   h1 {
@@ -321,7 +321,7 @@ img[alt] {
 }
 @media (max-width: 768px) {
   body {
-    background: url("./assets/HyperWetBCN-tablet.webp") no-repeat center center fixed;
+    background: url("../assets/HyperWetBCN-tablet.webp") no-repeat center center fixed;
     background-size: cover;
   }
   h1 {
@@ -345,7 +345,7 @@ img[alt] {
 }
 @media (min-width: 769px) {
   body {
-    background: url("./assets/HyperWetBCN-desktop.webp") no-repeat center center fixed;
+    background: url("../assets/HyperWetBCN-desktop.webp") no-repeat center center fixed;
     background-size: cover;
   }
 }
