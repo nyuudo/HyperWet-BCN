@@ -4,6 +4,8 @@ $breakpoints: (
   "desktop": 1024px,
 ) !default;
 
+// Mediaqueries logic as proposed by https://github.com/eduardoboucas#
+
 $media-expressions: (
   "screen": "screen",
   "print": "print",

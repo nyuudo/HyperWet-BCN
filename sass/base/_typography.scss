@@ -15,6 +15,10 @@ h1 {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
+  &::selection {
+    background-color: colors.$dark-color;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -30,6 +34,10 @@ h1 {
 h2 {
   font-size: 1.5rem;
   text-align: center;
+
+  &::selection {
+    background-color: colors.$dark-color;
+  }
 }
 
 h3 {

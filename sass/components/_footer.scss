@@ -1,3 +1,4 @@
+@use "../base/colors";
 .hyper-footer {
   display: flex;
   justify-content: space-between;
@@ -26,5 +27,9 @@
   .footer-text {
     align-self: flex-end;
     margin-bottom: 42px;
+
+    &::selection {
+      background-color: colors.$complementary-color;
+    }
   }
 }

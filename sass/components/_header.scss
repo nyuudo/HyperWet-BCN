@@ -34,16 +34,40 @@ nav {
   gap: 32px;
 }
 
+.hyper-search {
+  position: relative;
+
+  &::after {
+    content: "SEARCH";
+    display: contents;
+    vertical-align: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+}
+
+.hyper-user {
+  position: relative;
+
+  &::after {
+    content: "LOG-IN";
+    display: contents;
+    vertical-align: 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+  }
+}
 .hyper-basket {
   position: relative;
 
   &::before {
     position: absolute;
     display: block;
-    color: red;
+    z-index: 1;
+    bottom: 25%;
+    right: 65%;
+    color: colors.$danger-color;
     content: "•";
-    font-size: 40px;
-    margin-right: 24px;
-    margin-bottom: 8px;
+    font-size: 3rem;
   }
 }

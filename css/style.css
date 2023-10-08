@@ -117,6 +117,9 @@ h1 {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
+h1::selection {
+  background-color: #233564;
+}
 h1::after {
   content: "";
   display: block;
@@ -131,6 +134,9 @@ h1::after {
 h2 {
   font-size: 1.5rem;
   text-align: center;
+}
+h2::selection {
+  background-color: #233564;
 }
 
 h3 {
@@ -185,17 +191,40 @@ nav {
   gap: 32px;
 }
 
+.hyper-search {
+  position: relative;
+}
+.hyper-search::after {
+  content: "SEARCH";
+  display: contents;
+  vertical-align: 12px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.hyper-user {
+  position: relative;
+}
+.hyper-user::after {
+  content: "LOG-IN";
+  display: contents;
+  vertical-align: 12px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
 .hyper-basket {
   position: relative;
 }
 .hyper-basket::before {
   position: absolute;
   display: block;
-  color: red;
+  z-index: 1;
+  bottom: 25%;
+  right: 65%;
+  color: #ff4757;
   content: "•";
-  font-size: 40px;
-  margin-right: 24px;
-  margin-bottom: 8px;
+  font-size: 3rem;
 }
 
 .hyper-main {
@@ -233,26 +262,92 @@ nav {
   align-self: flex-end;
   margin-bottom: 42px;
 }
+.hyper-footer .footer-text::selection {
+  background-color: #645223;
+}
 
 body {
-  background: url("/assets/HyperWetBCN.webp") no-repeat center center fixed;
-  background-size: cover;
   font-family: "Noto Sans JP", sans-serif;
   color: #f5f6fa;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  /*   h1 {
-    @include responsive.media("<=mobile") {
-      font-size: 1rem;
-    }
-  } */
 }
 
-/* img[alt] {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+img[alt] {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
- */
+
+@media (max-width: 375px) {
+  body {
+    background: url("/assets/HyperWetBCN-mobile.webp") no-repeat center center fixed;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .hyper-tools {
+    gap: 16px;
+  }
+  .hyper-footer {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hyper-footer::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: #37539d;
+    width: 375px;
+    height: 144px;
+    mix-blend-mode: multiply;
+  }
+  .hyper-footer::after {
+    display: none;
+  }
+  .hyper-footer .footer-logo {
+    width: 240px;
+    height: 45px;
+    align-self: center;
+  }
+  .hyper-footer .footer-text {
+    font-size: 0.75rem;
+    align-self: center;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background: url("/assets/HyperWetBCN-tablet.webp") no-repeat center center fixed;
+    background-size: cover;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+    margin-left: -16px;
+    margin-top: 16px;
+  }
+  h3::before {
+    width: 69px;
+    height: 92px;
+  }
+  .hyper-search::after {
+    display: none;
+  }
+  .hyper-user::after {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  body {
+    background: url("/assets/HyperWetBCN-desktop.webp") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
